@@ -1,4 +1,64 @@
-<hello name="{{ name }}"></hello>
+<!-- <hello name="{{ name }}"></hello>
 <p>
   Start editing to see some magic happen :)
-</p>
+</p> -->
+<!-- <input type="text" [(ngModel)]=this.name/> -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container">
+
+  <h3 >  Sign up for Yahoo Mail</h3>
+  <h5> Create a Yahoo email address  </h5>
+  <!-- <input [(ngModel)]="name"> -->
+  <!-- <p>{{name}}</p> -->
+<form >
+  <div  class="input-group">
+    <input type="text" placeholder="First name" class="form-control" />
+    <input type="text" placeholder="Last name" class="form-control"/>
+  </div>
+  <div class="input-group" >
+    <input type="text" placeholder="Email address" class="form-control">
+    <p class="text-secondary"  class="form-control"  >@yahoo.com</p>
+    
+  </div>
+  <a href="" >I want to use my current email address</a>
+  <div >
+    <input type="password" class="form-control" placeholder="Password" />
+  </div>
+  <div class="input-group" >
+    <select >
+      <option>+91</option>
+      <option>+1</option>
+      <option>+44</option>
+    </select>
+   
+    <input type="text" placeholder="Mobile phone number" class="form-control" />
+  </div>
+  <div class="input-group">
+    <select class="form-control" >
+      <!-- <option >Birth month</option> -->
+      <option>January</option>
+      <option>February</option>
+      <option>March</option>
+      <option>April</option>
+      <option>May</option>
+      <option>June</option>
+      <option>July</option>
+      <option>August</option>
+      <option>September</option>
+      <option>October</option>
+      <option>November</option>
+      <option>December</option>
+    </select>
+    <input type="text" placeholder="Day" class="form-control"/>
+    <input type="text" placeholder="Year" class="form-control"/>
+
+  </div>
+  <div class="input-group">
+      <input type="text" placeholder="Gender" class="form-control"/>
+  </div>
+  <div >
+    <button type="button" class="btn btn-outline-primary" (click)="dataPass()">Create</button>
+  </div>
+ 
+</form>  
+</div>
