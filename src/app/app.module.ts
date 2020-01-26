@@ -10,4 +10,14 @@ import { HelloComponent } from './hello.component';
   declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule { 
+  // firstName:string ;
+  // lastName:string;
+  // email:string;
+  // password:string;
+  // mobileNo:number;
+  // day:number;
+  // month:number;
+  // year:number;
+  // gender:string;
+}

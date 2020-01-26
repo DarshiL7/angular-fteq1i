@@ -6,5 +6,14 @@ import { Component, Input } from '@angular/core';
   styles: [`h1 { font-family: Lato; }`]
 })
 export class HelloComponent  {
-  @Input() name: string;
+  //@Input() name: string;
+  firstName:string ;
+  lastName:string;
+  email:string;
+  password:string;
+  mobileNo:number;
+  day:number;
+  month:number;
+  year:number;
+  gender:string;
 }
