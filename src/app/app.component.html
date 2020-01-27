@@ -64,9 +64,34 @@
   <div class="form-group">
       <input type="text" placeholder="Gender" class="form-control" formControlName="gender" [ngStyle]="err_gender"/>
   </div>
+  <div [formGroup]="userFormGroup.controls.address">
+   
+          <input type="text" placeholder="Address" class="form-control"  />
+
+       
+          <input type="text" placeholder="Street/house-No" class="form-control" formControlName="street"/>
+          <input type="text" placeholder="Area" class="form-control" formControlName="area"/>
+          <input type="text" placeholder="City" class="form-control" formControlName="city"/>
+
+       
+    
+  
+   
+  </div>
   <div class="form-group">
     <button type="button" class="btn btn-outline-primary" (click)="dataPass()">Create</button>
+
   </div>
+  <div class="form-group">
+    <button type="button" class="btn btn-primary" (click) ="addArray()">Create Hobbies
+    </button>
+  </div>
+  <div formArrayName="hobbies" *ngFor="let hobbie of userFormGroup.controls.hobbies?.value;let i=index" class="form-group">
+    <div [formGroupName]="i">
+        <input type="text" placeholder="HobbieName"  formControlName="hobbyName"/>
+    </div>
+  </div>
+  
  
 </form>  
 </div>
