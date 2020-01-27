@@ -5,16 +5,16 @@
   <h3 >  Sign up for Yahoo Mail</h3>
   <h5> Create a Yahoo email address  </h5>
  
-<form   >
+<form  [formGroup]="userFormGroup" >
   <div class="form-group">
     <div  class="input-group">
-      <input type="text" placeholder="First name" class="form-control" />
-      <input type="text" placeholder="Last name" class="form-control" />
+      <input type="text" placeholder="First name" class="form-control"  formControlName="firstName" [ngStyle]="err_firstName"/>
+      <input type="text" placeholder="Last name" class="form-control" formControlName="lastName" [ngStyle]="err_lastName"/>
     </div>
   </div>
   
     <div class="input-group" >
-      <input type="text" placeholder="Email address" class="form-control">
+      <input type="text" placeholder="Email address" class="form-control" formControlName="email" [ngStyle]="err_email">
       <p class="text-secondary"  class="form-control"  >@yahoo.com</p>
     
     </div>
@@ -22,7 +22,7 @@
   
   <a href="" >I want to use my current email address</a>
   <div class="form-group">
-    <input type="password" class="form-control" placeholder="Password" />
+    <input type="password" class="form-control" placeholder="Password" formControlName="password" [ngStyle]="err_password"/>
   </div>
   <div class="form-group">
     <div class="input-group" >
@@ -32,12 +32,12 @@
         <option>+44</option>
       </select>
    
-      <input type="text" placeholder="Mobile phone number" class="form-control" />
+      <input type="text" placeholder="Mobile phone number" class="form-control" formControlName="mobileNo" [ngStyle]="err_mobileNo"/>
     </div>
   </div>
   <div class="form-group">
     <div class="input-group">
-      <select class="form-control" >
+      <select class="form-control" formControlName="month" [ngStyle]="err_month">
         
         <option>January</option>
         <option>February</option>
@@ -52,14 +52,14 @@
         <option>November</option>
         <option>December</option>
       </select>
-      <input type="text" placeholder="Day" class="form-control"/>
-      <input type="text" placeholder="Year" class="form-control"/>
+      <input type="text" placeholder="Day" class="form-control" formControlName="day" [ngStyle]="err_day"/>
+      <input type="text" placeholder="Year" class="form-control"formControlName="year" [ngStyle]="err_year"/>
 
     </div>
     
   </div>  
   <div class="form-group">
-      <input type="text" placeholder="Gender" class="form-control"/>
+      <input type="text" placeholder="Gender" class="form-control" formControlName="gender" [ngStyle]="err_gender"/>
   </div>
   <div class="form-group">
     <button type="button" class="btn btn-outline-primary" (click)="dataPass()">Create</button>

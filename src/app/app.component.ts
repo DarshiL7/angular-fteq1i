@@ -8,30 +8,86 @@ import { FormBuilder,FormGroup,Validators } from "@angular/forms"
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent implements OnInit  {
-  //user:User=new User();
-//   userFormGroup:FormGroup;
+ // user:User=new User();
+  userFormGroup:FormGroup;
 
-//   constructor(private formBuilder:FormBuilder){
+  constructor(private formBuilder:FormBuilder){
 
-//   }
-//  ngOnInit(){
-//    this.userFormGroup=this.formBuilder.group({
+  }
+ ngOnInit(){
+   this.userFormGroup=this.formBuilder.group({
 
-//     firstName:['',Validators.required],
-//     lastName:['',Validators.required],
-//     email:['',Validators.required],
-//     password:['',Validators.required],
-//     mobileNo:['',Validators.required],
-//     day:['',Validators.required],
-//     month:['',Validators.required],
-//     year:['',Validators.required],
-//     gender:['',Validators.required]
-//    })
+    firstName:['',Validators.required],
+    lastName:['',Validators.required],
+    email:['',Validators.required],
+    password:['',Validators.required],
+    mobileNo:['',Validators.required],
+    day:['',Validators.required],
+    month:['',Validators.required],
+    year:['',Validators.required],
+    gender:['',Validators.required]
+   })
    
 
 
-//  }
+ }
  dataPass(){
    console.log(this.userFormGroup.value);
+   if(this.userFormGroup.value. firstName==""){
+      this.err_firstName={'border-color':'red'}
+      
+   }else{
+     this.err_firstName={'border-color':''}
+   }
+   if(this.userFormGroup.value. lastName==""){
+      this.err_lastName={'border-color':'red'}
+      
+   }else{
+     this.err_lastName={'border-color':''}
+   }
+   if(this.userFormGroup.value.email==""){
+      this.err_email={'border-color':'red'}
+      
+   }else{
+     this.err_email={'border-color':''}
+   }
+   if(this.userFormGroup.value.password==""){
+      this.err_password={'border-color':'red'}
+      
+   }else{
+     this.err_password={'border-color':''}
+   }
+   if(this.userFormGroup.value.mobileNo==""){
+      this.err_mobileNo={'border-color':'red'}
+      
+   }else{
+     this.err_mobileNo={'border-color':''}
+   }
+   if(this.userFormGroup.value.month==""){
+      this.err_month={'border-color':'red'}
+      
+   }else{
+     this.err_month={'border-color':''}
+   }
+   if(this.userFormGroup.value.day==""){
+      this.err_day={'border-color':'red'}
+      
+   }else{
+     this.err_day={'border-color':''}
+   }
+   if(this.userFormGroup.value.year==""){
+      this.err_year={'border-color':'red'}
+      
+   }else{
+     this.err_year={'border-color':''}
+   }
+   if(this.userFormGroup.value.gender==""){
+      this.err_gender={'border-color':'red'}
+      
+   }else{
+     this.err_gender={'border-color':''}
+   }
+
+
  } 
 }
