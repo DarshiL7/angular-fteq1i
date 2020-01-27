@@ -20,8 +20,8 @@ export class AppComponent implements OnInit  {
     firstName:['',Validators.required],
     lastName:['',Validators.required],
     email:['',Validators.required],
-    password:['',Validators.required],
-    mobileNo:['',Validators.required],
+    password:['',Validators.required,length],
+    mobileNo:['',Validators.required,length],
     day:['',Validators.required],
     month:['',Validators.required],
     year:['',Validators.required],
@@ -87,6 +87,13 @@ export class AppComponent implements OnInit  {
    }else{
      this.err_gender={'border-color':''}
    }
+   if(this.userFormGroup.value.password.length<8){
+     alert("Enetr password lenghth of more than 8 characters");
+   }
+   if(this.userFormGroup.value.mobileNo.length>10||this.userFormGroup.value.mobileNo.length<10){
+     alert("Enetr mobile number of 10 characters");
+   }
+
 
 
  } 
