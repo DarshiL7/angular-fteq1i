@@ -31,7 +31,7 @@ export class AppComponent implements OnInit  {
 
 
 //  }
-//  dataPass(){
-//    console.log(this.userFormGroup.value);
-//  } 
+ dataPass(){
+   console.log(this.userFormGroup.value);
+ } 
 }
