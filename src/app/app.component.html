@@ -11,7 +11,13 @@
 <form  [formGroup]="userFormGroup" >
   <div class="form-group">
     <div  class="input-group">
-      <input type="text" placeholder="First name" class="form-control"  formControlName="firstName" [ngStyle]="err_firstName"/>
+      
+        
+     
+      <input type="text" placeholder="First name" class="form-control"  formControlName="firstName" [ngStyle]="err_firstName" />
+      <div *ngIf="userFormGroup.controls.firstName.invalid&&(userFormGroup.controls.firstName.touched||userFormGroup.controls.firstName.dirty)">
+        <span >Enter Name</span>
+      </div>
       <input type="text" placeholder="Last name" class="form-control" formControlName="lastName" [ngStyle]="err_lastName"/>
     </div>
   </div>
