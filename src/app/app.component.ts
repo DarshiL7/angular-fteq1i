@@ -56,12 +56,12 @@ addArray(){
 
 
  dataPass(){
-   console.log(this.userFormGroup);
+  
    console.log(this.userFormGroup.value);
    this.userFormGroup.controls.firstName.patchValue("Kansara");
-   for(var i=0;i<2;i++){
-     console.log(this.userFormGroup.controls.hobbies.get(i.toString()).value);
-   }
+   
+     console.log(this.userFormGroup.controls.hobbies.value);
+  
    
    
   //  if(this.userFormGroup.value. firstName==""){
