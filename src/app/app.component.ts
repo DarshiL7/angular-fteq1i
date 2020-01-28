@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, OnChanges,OnDestroy,DoCheck,AfterContentInit,AfterContentChecked,AfterViewInit,AfterViewChecked} from "@angular/core"
 //import {User} from './user.model.ts';
 import { FormBuilder,FormGroup,Validators ,FormArray} from "@angular/forms"
 
@@ -14,7 +14,16 @@ export class AppComponent implements OnInit  {
   constructor(private formBuilder:FormBuilder){
       
   }
+//  ngOnChanges(){console.log("onchange method called");}
+//  ngDoCheck(){console.log("docheck method called");}
+//  ngAfterContentInit(){console.log("after-contentinit method called");}
+//  ngAfterContentChecked(){console.log("after-contentchecked method called");}
+//  ngAfterViewInit(){console.log("after-viewinit method called");}
+//  ngAfterViewChecked(){console.log("after-viewcheckd method called");}
+//  ngOnDestroy(){console.log("Destroy method called");}
+
  ngOnInit(){
+   console.log("Oninit method called");
    this.userFormGroup=this.formBuilder.group({
 
     firstName:['',Validators.required],
