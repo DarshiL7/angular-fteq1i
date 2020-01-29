@@ -4,12 +4,12 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component';
+// import { ParentComponent } from './parent/parent.component';
+// import { ChildComponent } from './child/child.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ,ReactiveFormsModule],
-  declarations: [ AppComponent, HelloComponent, ParentComponent, ChildComponent ],
+  declarations: [ AppComponent, HelloComponent, ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { 
